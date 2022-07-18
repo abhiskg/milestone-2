@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .stage {
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+      }
+
+      @keyframes sliding {
+        0% {
+          background-color: red;
+          top: 0;
+          left: 0;
+        }
+
+        50% {
+          top: 250px;
+        }
+        100% {
+          background-color: blue;
+          top: 0;
+          left: 250px;
+        }
+      }
+
+      .ball {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+        animation: sliding 2s ease-in-out infinite alternate;
+        animation-play-state: running;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
